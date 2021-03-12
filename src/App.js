@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import FormWrapper from "./components/FormWrapper";
+import CheckTotalForm from "./components/CheckTotalForm";
+import TipPercentageForm from "./components/TipPercentageForm";
+import FinalNumbers from "./components/FinalNumbers";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="backG container-fluid pt-3" style={{ height: "100vh" }}>
+      <FormWrapper
+        render={(
+          checkTotal,
+          setCheckTotal,
+          tipPercentage,
+          setTipPercentage,
+          finalTip
+        ) => {
+          return (
+            <>
+              <CheckTotalForm
+                checkTotal={checkTotal}
+                setCheckTotal={setCheckTotal}
+              />
+              <TipPercentageForm
+                tipPercentage={tipPercentage}
+                setTipPercentage={setTipPercentage}
+                percentOptions={[15, 25, 30, 55, 60, 78, 89]}
+              />
+              <FinalNumbers finalTip={finalTip} checkTotal={checkTotal} />
+            </>
+          );
+        }}
+      />
     </div>
   );
-}
+};
 
 export default App;
