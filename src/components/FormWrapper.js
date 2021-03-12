@@ -13,8 +13,6 @@ const FormWrapper = () => {
     setFinalTip((checkTotal * (tipPercentage / 100)).toFixed(2));
     setFinalTotal(Number(finalTip) + Number(checkTotal));
   };
-  
-  
 
   return (
     <div className="card mx-auto p-3" style={{ width: "50vw" }}>
