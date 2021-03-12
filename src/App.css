@@ -5,5 +5,14 @@
   letter-spacing: 0.5px;
 }
 .backG.container-fluid.pt-3 {
-  background-image: url(https://images.pexels.com/photos/3308588/pexels-photo-3308588.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-image: linear-gradient(
+      15deg,
+      rgba(34, 193, 195, 0.8) 0%,
+      rgba(253, 187, 45, 0.4) 100%
+    ),
+    url(../src/images/background.jpg);
+  background-color: #333;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

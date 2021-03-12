@@ -1,5 +1,4 @@
 const TipPercentageForm = ({
-  tipPercentage,
   setTipPercentage,
   percentOptions,
 }) => {
